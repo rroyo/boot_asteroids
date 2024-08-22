@@ -4,17 +4,15 @@ from constants import *
 
 def main():
     pygame.init()
-    print("Starting asteroids!")
-    print("Screen width:", SCREEN_WIDTH)
-    print("Screen height:", SCREEN_HEIGHT)
-
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    pygame.display.set_caption("Asteroids")
 
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-        pygame.Surface.fill(screen, (0, 0, 0))
+
+        pygame.fill("black")
         pygame.display.flip()
 
 
